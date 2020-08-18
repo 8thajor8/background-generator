@@ -5,10 +5,13 @@ var body = document.getElementById("gradient");
 var randomize= document.querySelector("button");
 
 function setGradient() {
+	
 	body.style.background = 
-	"linear-gradient(to right, "+ color1.value+", "+ color2.value+ ")";
+	`linear-gradient(to right, ${color1.value}, ${color2.value})`;
 
-	css.textContent = body.style.background + ";";
+
+	css.textContent = body.style.background;
+	
 }
 
 
@@ -24,8 +27,8 @@ function getRandomColor() {
 
 function getmycolors(){
 	
-	color1.setAttribute("value",getRandomColor());
-	color2.setAttribute("value",getRandomColor());
+	color1.value = getRandomColor();
+	color2.value = getRandomColor();
 	setGradient();
 }
 
